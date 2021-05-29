@@ -12,7 +12,7 @@
 <br>
 <br>
 
-Installation:
+# Installation
 
 1. clone 本專案到本地端
 ```
