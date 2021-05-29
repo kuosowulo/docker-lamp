@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
     webserver:
-        build: ./bin/${PHP_VERSION}
+        build: ./bin/php/${PHP_VERSION}
         container_name: '${PROJECT_NAME}-${PHP_VERSION}'
         restart: 'always'
         ports:
@@ -19,7 +19,7 @@ services:
             - backend
 
     database:
-        build: ./bin/${DATABASE_VERSION}
+        build: ./bin/mysql/${DATABASE_VERSION}
         container_name: '${PROJECT_NAME}-${DATABASE_VERSION}'
         restart: 'always'
         ports:
