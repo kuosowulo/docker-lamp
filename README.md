@@ -56,6 +56,8 @@ docker-compose up -d
 - xmlrpc
 - gd
 
+<br>
+
 若你想安裝更多套件可以到 ./bin/webserver/Dockerfile 新增任何你想要的套件，並且重啟 container 即可。
 ```
 docker-compose build
@@ -65,7 +67,7 @@ docker-compose build
 <br>
 
 # WebServer
-Apache的port被指定為80，可以用http:localhost:80/查看phpinfo。
+Apache 的 port 被指定為 80，可以用 http://localhost:80/ 查看 phpinfo ，若是 80 port 被佔用或是想做更換可以到 .env 檔裡設定。
 
 container 裡的 Apache 目錄 /var/www/html 與本地端的 /www 目錄綁定，若要更改路徑可至 .env 檔裡更改。
 
