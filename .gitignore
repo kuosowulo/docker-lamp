@@ -1,5 +1,5 @@
 /.env
-/config/*
-/data/*
-/logs/*
+/data/mysql/*
+/logs/apache2/*
+/logs/mysql/*
 /www/**
