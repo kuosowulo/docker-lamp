@@ -1,10 +1,9 @@
 # build LAMP by Docker Compose
 用docker compose建置一個基本的LAMP環境。
 
-一共啟動五個容器包含有:
+一共啟動四個容器包含有:
 
-- PHP:7.3
-- Apache
+- Apache + PHP:7.3
 - MySQL:8.0
 - phpMyAdmin
 - Redis
