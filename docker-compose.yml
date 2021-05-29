@@ -11,7 +11,7 @@ services:
         depends_on: 
             - database
         volumes:
-            - ${DOCUMENT_ROOT-./www}:/var/www/html
+            - ${DOCUMENT_ROOT-./www}:${APACHE_DOCUMENT_ROOT}
             - ${PHP_INI-./config/php/php.ini}:/usr/local/etc/php/php.ini}
             - ${VHOSTS_DIR-./config/vhosts}://etc/apache2/sites-enabled
             - ${LOG_DIR-./logs/apache2}:/var/log/apache2
@@ -23,7 +23,7 @@ services:
         container_name: '${PROJECT_NAME}-${DATABASE_VERSION}'
         restart: 'always'
         ports:
-            - "${HOST_MYSQL_PORT}:3306"
+            - "127.0.0.1:${HOST_MYSQL_PORT}:3306"
         volumes:
             - ${MYSQL_DATA_DIR-./data/mysql}:/var/lib/mysql
             - ${MYSQL_LOG_DIR-./logs/mysql}:/var/log/mysql
@@ -40,7 +40,7 @@ services:
         container_name: '${PROJECT_NAME}-phpmyadmin'
         restart: always
         ports:
-            - "${HOST_PMA_HOST}:80"
+            - "127.0.0.1:${HOST_PMA_HOST}:80"
         depends_on: 
             - database
         environment: 
@@ -58,7 +58,7 @@ services:
         image: redis:latest
         container_name: '${PROJECT_NAME}-redis'
         ports:
-            - "${HOST_REDIST_PORT}:6379"
+            - "$127.0.0.1:{HOST_REDIST_PORT}:6379"
     
 networks:
     backend:
