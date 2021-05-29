@@ -1,5 +1,5 @@
-# /.env
-# /config/*
-# /data/*
-# /logs/*
-# /www/**
+/.env
+/config/*
+/data/*
+/logs/*
+/www/**
