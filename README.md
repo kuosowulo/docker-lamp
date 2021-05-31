@@ -33,7 +33,7 @@ cp .env.example .env
 docker-compose up -d
 ```
 
-到此LAMP環境已經建置完成，可以透過 127.0.0.1 或是 http:localhost 訪問你的環境。
+到此LAMP環境已經建置完成，可以透過 127.0.0.1 或是 http://localhost 訪問你的環境。
 
 
 <br>
